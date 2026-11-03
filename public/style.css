@@ -1,0 +1,308 @@
+/*-----------------------------------------------------------------------
+Template Name      : Lucxorio - Luxury Hotel and Resort Booking HTML Template
+Author             : pus_infotech
+Author Portfolio   : https://themeforest.net/user/pus_infotech 
+Version            : 1.0.0 
+-----------------------------------------------------------------------
+CSS TABLE OF CONTENTS
+-----------------------------------------------------------------------
+- base 
+    - variables
+    - mixin
+    - reset
+    - typography
+    - forms
+
+- components 
+    - accordion
+    - breadcrumb
+    - buttons
+    - offcanvus
+    - widget
+
+- theme
+    - animations
+    - common
+    - preloader 
+    - spacing
+    - theme-class
+ 
+- layout
+    -header
+        - header
+        - meanmenu
+    - footer 
+        - footer
+    - section 
+        - hero 
+        - micon
+        - about
+        - authentication
+        - comingsoon
+        - room
+        - facilities
+        - booking
+        - video
+        - why-choose
+        - our-facts
+        - services
+        - offer
+        - team
+        - testimonials
+        - blog
+        - subscribe
+        - contact
+        - gallery
+        - skill
+        - counter
+        - faq
+        - pricing
+        - restaurant
+        - marquee
+Main Style file-> assets/css/main.css
+-----------------------------------------------------------------------*/
+
+/* =====================================================
+   MAHUA HOUSE — FACILITIES SECTION (Modern Redesign)
+   Site palette: primary #033631 | secondary #DAA520 | extra #E7EEEE
+   ===================================================== */
+
+.mh-facilities-section {
+    position: relative;
+    background: #ffffff;
+    padding: 90px 0 100px;
+    overflow: hidden;
+}
+
+/* Subtle green tint wash in background */
+.mh-facilities-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(3, 54, 49, 0.04) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+/* Primary-green top border accent */
+.mh-facilities-topbar {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #033631 30%, #DAA520 50%, #033631 70%, transparent 100%);
+    margin-bottom: 0;
+}
+
+/* ---- Section Header ---- */
+.mh-facilities-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 10px;
+}
+
+.mh-fac-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #DAA520;
+    margin-bottom: 16px;
+}
+
+.mh-fac-heading {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    color: #033631;
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.mh-fac-heading em {
+    font-style: normal;
+    color: #DAA520;
+}
+
+.mh-fac-sub {
+    font-size: 15px;
+    color: rgba(3, 54, 49, 0.55);
+    margin-bottom: 28px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* Ornamental divider */
+.mh-fac-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: #DAA520;
+}
+
+.mh-fac-divider span {
+    display: block;
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #DAA520);
+}
+
+.mh-fac-divider span:last-child {
+    background: linear-gradient(90deg, #DAA520, transparent);
+}
+
+.mh-fac-divider i {
+    font-size: 9px;
+    opacity: 0.85;
+}
+
+/* ---- Cards ---- */
+.mh-fac-row {
+    position: relative;
+    z-index: 1;
+}
+
+.mh-fac-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid rgba(3, 54, 49, 0.1);
+    border-radius: 16px;
+    padding: 36px 32px 32px;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(3, 54, 49, 0.07);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+}
+
+/* Green-to-gold left-edge accent bar */
+.mh-fac-card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 50px;
+    background: linear-gradient(180deg, #033631, #DAA520);
+    border-radius: 0 4px 4px 0;
+    transition: height 0.4s ease;
+}
+
+.mh-fac-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 60px rgba(3, 54, 49, 0.14), 0 0 0 1px rgba(218, 165, 32, 0.3);
+    border-color: rgba(218, 165, 32, 0.35);
+    background: #E7EEEE;
+}
+
+.mh-fac-card:hover .mh-fac-card-accent {
+    height: 100%;
+    border-radius: 0;
+}
+
+/* ---- Icon ---- */
+.mh-fac-icon-wrap {
+    margin-bottom: 24px;
+}
+
+.mh-fac-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+    background: rgba(3, 54, 49, 0.07);
+    border: 1px solid rgba(3, 54, 49, 0.15);
+    transition: background 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+}
+
+.mh-fac-icon i {
+    font-size: 26px;
+    color: #033631;
+    transition: color 0.35s ease, transform 0.35s ease;
+}
+
+.mh-fac-card:hover .mh-fac-icon {
+    background: #033631;
+    border-color: #033631;
+    transform: scale(1.08);
+}
+
+.mh-fac-card:hover .mh-fac-icon i {
+    color: #DAA520;
+    transform: rotate(10deg);
+}
+
+/* ---- Body ---- */
+.mh-fac-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #033631;
+    margin-bottom: 18px;
+    letter-spacing: 0.3px;
+    transition: color 0.35s ease;
+}
+
+.mh-fac-card:hover .mh-fac-title {
+    color: #07554D;
+}
+
+/* ---- List ---- */
+.mh-fac-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mh-fac-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: rgba(3, 54, 49, 0.55);
+    transition: color 0.3s ease;
+    line-height: 1.5;
+}
+
+.mh-fac-list li i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    border-radius: 50%;
+    background: rgba(218, 165, 32, 0.15);
+    color: #DAA520;
+    font-size: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.mh-fac-card:hover .mh-fac-list li {
+    color: #033631;
+}
+
+.mh-fac-card:hover .mh-fac-list li i {
+    background: #DAA520;
+    color: #033631;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 991px) {
+    .mh-facilities-section {
+        padding: 70px 0 80px;
+    }
+    .mh-fac-heading {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 575px) {
+    .mh-fac-card {
+        padding: 28px 22px 24px;
+    }
+    .mh-fac-heading {
+        font-size: 28px;
+    }
+}
